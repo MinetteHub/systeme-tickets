@@ -17,7 +17,7 @@ const ticketSchema = new mongoose.Schema({
     },
     priority: {
         type: String,
-        enum: ['low', 'medium', 'high', 'urgent'],
+        enum: ['low', 'medium', 'high'],
         default: 'medium'
     },
     category: {
@@ -25,7 +25,7 @@ const ticketSchema = new mongoose.Schema({
         enum: ['bug', 'feature', 'support', 'question'],
         default: 'support'
     },
-    // Relations
+    // Relations 
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
