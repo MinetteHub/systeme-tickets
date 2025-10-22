@@ -68,7 +68,7 @@ exports.login = async (req, res) => {
                 error: 'Email et mot de passe requis'
             });
         }
-
+    
         // Vérifier user
         const user = await User.findOne({ email }).select('+password');
         if (!user) {
